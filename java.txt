@@ -33,64 +33,95 @@ public class car {
         String car3three="8\t\t美式皮卡\t60\t\t\t\t\t\t2\t\t\t\t\t\t3";
         System.out.println(car3three);
         Scanner in=new Scanner(System.in);
-        
+
         double num1=0,num2=0,num3=0,num4=0,num5=0,num6=0,num7=0,num8=0;//准备存入不同车辆的数量和天数
 
         double day1=0,day2=0,day3=0,day4=0,day5=0,day6=0,day7=0,day8=0;
 
         for (int i = 1; i <= 8; i++) {
             if(i==1){
-                System.out.println("请输入序号"+i+"（小轿车）的租用数量");
-                num1=in.nextInt();
-                System.out.println("请输入租用小轿车的天数");
-                day1=in.nextInt();
+                do {
+                    System.out.println("请输入序号" + i + "（小轿车）的租用数量");
+                    num1 = in.nextInt();
+                }while(num1<0);
+
+
+                do{
+                    System.out.println("请输入租用小轿车的天数");
+                    day1=in.nextInt();
+                  }while(day1<0);
             }
             if(i==2){
-                System.out.println("请输入序号"+i+"（面包车）的租用数量");
-                num2=in.nextInt();
-                System.out.println("请输入租用面包车的天数");
-                day2=in.nextInt();
+                do {
+                    System.out.println("请输入序号" + i + "（面包车）的租用数量");
+                    num2 = in.nextInt();
+                }while(num2<0);
+                do {
+                    System.out.println("请输入租用面包车的天数");
+                    day2 = in.nextInt();
+                }while (day2<0);
             }
             if(i==3){
-                System.out.println("请输入序号"+i+"（大巴车）的租用数量");
-                num3=in.nextInt();
-                System.out.println("请输入租用大巴车的天数");
-                day3=in.nextInt();
+                do {
+                    System.out.println("请输入序号" + i + "（大巴车）的租用数量");
+                    num3 = in.nextInt();
+                }while (num3<0);
+                do {
+                    System.out.println("请输入租用大巴车的天数");
+                    day3 = in.nextInt();
+                }while (day3<0);
             }
             if(i==4){
-                System.out.println("请输入序号"+i+"（低栏车）的租用数量");
-                num4=in.nextInt();
-                System.out.println("请输入租用低栏车的天数");
-                day4=in.nextInt();
+                do {
+                    System.out.println("请输入序号" + i + "（低栏车）的租用数量");
+                    num4 = in.nextInt();
+                }while (num4<0);
+                do {
+                    System.out.println("请输入租用低栏车的天数");
+                    day4 = in.nextInt();
+                }while (day4<0);
             }
             if(i==5){
-                System.out.println("请输入序号"+i+"（高栏车）的租用数量");
-                num5=in.nextInt();
-                System.out.println("请输入租用高栏车的天数");
-                day5=in.nextInt();
+                do {
+                    System.out.println("请输入序号" + i + "（高栏车）的租用数量");
+                    num5 = in.nextInt();
+                }while (num5<0);
+                do {
+                    System.out.println("请输入租用高栏车的天数");
+                    day5 = in.nextInt();
+                }while (day5<0);
             }
             if(i==6){
-                System.out.println("请输入序号"+i+"（厢式车）的租用数量");
-                num6=in.nextInt();
+                do {
+                    System.out.println("请输入序号" + i + "（厢式车）的租用数量");
+                    num6 = in.nextInt();
+                }while (num6<0);
+                do{
                 System.out.println("请输入租用厢式车的天数");
                 day6=in.nextInt();
+                }while (day6<0);
             }
             if(i==7){
-                System.out.println("请输入序号"+i+"（日式皮卡）的租用数量");
-                num7=in.nextInt();
-                System.out.println("请输入租用日式皮卡的天数");
-                day7=in.nextInt();
+                do {
+                    System.out.println("请输入序号" + i + "（日式皮卡）的租用数量");
+                    num7 = in.nextInt();
+                }while (num7<0);
+                do {
+                    System.out.println("请输入租用日式皮卡的天数");
+                    day7 = in.nextInt();
+                }while (day7<0);
             }
             if(i==8){
-                System.out.println("请输入序号"+i+"（美式皮卡）的租用数量");
-                num8=in.nextInt();
-                System.out.println("请输入租用美式皮卡的天数");
-                day8=in.nextInt();
+                do {
+                    System.out.println("请输入序号" + i + "（美式皮卡）的租用数量");
+                    num8 = in.nextInt();
+                }while (num8<0);
+                do {
+                    System.out.println("请输入租用美式皮卡的天数");
+                    day8 = in.nextInt();
+                }while (day8<0);
             }
         }
-
-
-
         double allpeoples,allgoods,money,allday,allcars;//计算各种总数
 
         allgoods=num4*1.5+num5*2.5+num6*4.5+num7*1+num8*3;
