@@ -1,0 +1,5 @@
+class Demo  {//创建公共数据
+      public int lib=1;
+      public int out=2;
+
+}

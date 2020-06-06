@@ -1,0 +1,33 @@
+//还书线程
+class Return implements Runnable {
+    private Demo r;//将数据引入
+
+    Return(Demo r) {
+        this.r = r;
+    }
+
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+
+                if (r.lib > 0) {//判断书本
+
+                    System.out.println("借出一本书");
+                    r.out++;
+                    r.lib--;
+                    System.out.println("还剩下" + r.lib + "本书");
+
+                } else if (r.lib == 0) {
+                    System.out.println("暂时无书可以借出");
+                    try {
+                        wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
+        }
+
+
+    }
+}

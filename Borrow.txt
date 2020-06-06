@@ -1,0 +1,28 @@
+
+//借书线程
+class Borrow implements Runnable {
+    private Demo r;//将数据引入
+
+    Borrow(Demo r) {
+        this.r = r;
+    }
+
+    public synchronized void run() {
+        for (int i = 0; i < 10; i++) {
+
+                if (r.out > 0) {//判断书本
+                    System.out.println("还了一本书");
+                    r.lib++;
+                    r.out--;
+                    System.out.println("还剩下" + r.out + "本书");
+//                    notifyAll();
+
+                } else if (r.lib == 3) {
+                    System.out.println("无需还书");
+
+                }
+
+
+        }
+    }
+}
